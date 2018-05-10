@@ -3,10 +3,7 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
-
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 
@@ -15,12 +12,7 @@ public class Controller {
     @FXML
     Canvas canvas = new Canvas();
 
-    @FXML
-    Button light = new Button();
-
     static GraphicsContext gc;
-//    static Random rand = new Random();
-//    static int rando = rand.nextInt(2);
     static int random = ThreadLocalRandom.current().nextInt(1, 3 + 1);
     static int x = 200, w = 100, h = 100;
 
@@ -57,8 +49,16 @@ public class Controller {
         }
     }
 
+
+    public void exit() throws Exception{
+        //Runtime.getRuntime().exec("java -java main.java");
+        System.out.println("Farewell, master.");
+        System.exit(0);
+    }
+
+
     public void initialize(){
-        System.out.println("Hello there, General Kenobi.");
+        System.out.println("I am ready, master.");
         gc = canvas.getGraphicsContext2D();
         drawShape(gc);
     }
