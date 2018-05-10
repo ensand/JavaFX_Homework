@@ -21,8 +21,10 @@
             <Canvas fx:id="canvas" height="450.0" onMouseClicked="#initialize" width="500.0" />
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="500.0" spacing="10.0">
                <children>
-                  <Button fx:id="light" mnemonicParsing="false" onMouseClicked="#color" text="Click me" />
-                  <Button fx:id="exit" mnemonicParsing="false" onMouseClicked="#exit" text="Exit" />
+                  <!--<Button fx:id="light" mnemonicParsing="false" onMouseClicked="#color" text="Click me" />-->
+                  <!--<Button fx:id="restart" mnemonicParsing="false" onMouseClicked="#restart" text="Restart" />-->
+                  <Button fx:id="restart" mnemonicParsing="false" onMouseClicked="#action" text="Click me" />
+                  <Button mnemonicParsing="false" onMouseClicked="#exit" text="Exit" />
                </children>
             </HBox>
          </children>

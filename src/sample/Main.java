@@ -1,3 +1,5 @@
+//Ülesanne 66
+
 package sample;
 
 import javafx.application.Application;

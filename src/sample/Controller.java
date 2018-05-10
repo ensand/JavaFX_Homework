@@ -13,7 +13,6 @@ public class Controller {
     Canvas canvas = new Canvas();
 
     static GraphicsContext gc;
-    static int random = ThreadLocalRandom.current().nextInt(1, 3 + 1);
     static int x = 200, w = 100, h = 100;
 
 
@@ -33,7 +32,15 @@ public class Controller {
     }
 
 
-    public void color(){
+    public void action() {
+        gc.setFill(Color.LIGHTGRAY);
+        for (int y = 35; y < 286; y = y + 125) {
+            gc.fillOval(x, y, w, h);
+            gc.strokeOval(x, y, w, h);
+        }
+        System.out.println("I am doing something. Please be proud of me, master <3");
+        int random = ThreadLocalRandom.current().nextInt(1, 3 + 1);
+
         if (random == 1) {
             gc.setFill(Color.RED);
             gc.fillOval(x, 35, w, h);
